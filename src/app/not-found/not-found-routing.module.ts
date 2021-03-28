@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './not-found.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
-  },
-  {
-    path: 'login',
-    loadChildren: () =>
-      import('./login/login.module').then((m) => m.LoginModule),
+    component: NotFoundComponent,
   },
 ];
 
@@ -17,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AuthRoutingModule {}
+export class NotFoundRoutingModule {}

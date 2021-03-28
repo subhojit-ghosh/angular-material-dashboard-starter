@@ -1,0 +1,14 @@
+<app-toolbar [drawer]="drawer"></app-toolbar>
+<mat-drawer-container class="w-100 h-100 bg-transparent" autosize>
+  <mat-drawer
+    #drawer
+    class="pr-1 mat-elevation-z2"
+    [mode]="(layoutService.isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(layoutService.isHandset$ | async) === false"
+  >
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <div class="container mt-3">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
