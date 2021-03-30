@@ -12,6 +12,8 @@ import { DashboardComponent } from './dashboard.component';
 import { SidenavComponent } from './layout/sidenav/sidenav.component';
 import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [DashboardComponent, ToolbarComponent, SidenavComponent],
@@ -26,6 +28,8 @@ import { MatTreeModule } from '@angular/material/tree';
     LayoutModule,
     MatListModule,
     MatTreeModule,
+    MatTooltipModule,
+    MatBadgeModule,
   ],
 })
 export class DashboardModule {}
